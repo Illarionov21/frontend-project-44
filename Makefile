@@ -1,4 +1,4 @@
-install: deps-install
+install:
         npm ci
 
 brain-games:
