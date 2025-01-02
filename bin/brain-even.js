@@ -1,6 +1,13 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
 
-export default function brainEven(name) {
+import readlineSync from 'readline-sync';
+import userName from '../src/cli.js';
+
+export default function brainEven() {
+  console.log('The script has started');
+  const name = userName();
+  console.log(`Retrieved username: ${name}`);
+
   let isWinner = true;
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -22,3 +29,5 @@ export default function brainEven(name) {
     console.log(`Congratulations, ${name}!`);
   }
 }
+
+brainEven();
